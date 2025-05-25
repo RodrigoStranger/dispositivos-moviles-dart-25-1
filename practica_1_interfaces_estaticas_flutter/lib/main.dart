@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue, // Color del tema
         fontFamily: 'Roboto', // Fuente del tema
       ),
-      // Cambiar por PantallaInicio, PantallaPerfil() o PantallaHobbies() para probar
+      // Cambiar por PantallaPerfil(), PantallaInicio() o PantallaHobbies() para probar
       home: PantallaPerfil(),
     );
   }
