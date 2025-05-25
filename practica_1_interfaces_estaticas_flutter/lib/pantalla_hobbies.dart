@@ -24,38 +24,38 @@ class HobbyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 20),
-      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.only(bottom: 20), // Margen inferior.
+      padding: const EdgeInsets.all(20), // Espaciado interno.
       decoration: BoxDecoration(
-        color: Colors.white.withAlpha((0.95 * 255).round()),
-        borderRadius: BorderRadius.circular(15),
+        color: Colors.white.withAlpha((0.95 * 255).round()), // Color de la tarjeta.
+        borderRadius: BorderRadius.circular(15), // Radio de la tarjeta.
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withAlpha((0.1 * 255).round()),
-            blurRadius: 8,
-            offset: const Offset(0, 3),
+            color: Colors.black.withAlpha((0.1 * 255).round()), // Color de la sombra.
+            blurRadius: 8, // Radio de la sombra.
+            offset: const Offset(0, 3), // Offset de la sombra.
           ),
         ],
       ),
       child: Row(
         children: [
           Container(
-            width: 80,
-            height: 80,
+            width: 80, // Ancho de la tarjeta.
+            height: 80, // Alto de la tarjeta.
             decoration: BoxDecoration(
-              color: color.withAlpha((0.2 * 255).round()),
-              borderRadius: BorderRadius.circular(15),
+              color: color.withAlpha((0.2 * 255).round()), // Color del icono y del fondo.
+              borderRadius: BorderRadius.circular(15), // Radio de la tarjeta.
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(15), // Radio de la tarjeta.
               child: Image.network(
-                imageUrl,
-                fit: BoxFit.cover,
+                imageUrl, // URL de la imagen del hobby.
+                fit: BoxFit.cover, // Formato de la imagen.
                 errorBuilder: (context, error, stackTrace) {
                   return Icon(
-                    icon,
-                    size: 40,
-                    color: iconColor,
+                    icon, // Icono del hobby.
+                    size: 40, // Tamaño del icono.
+                    color: iconColor, // Color del icono.
                   );
                 },
               ),
@@ -69,18 +69,18 @@ class HobbyCard extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: color,
+                    fontSize: 18, // Tamaño de la fuente.
+                    fontWeight: FontWeight.bold, // Peso de la fuente.
+                    color: color, // Color de la fuente.
                   ),
                 ),
                 const SizedBox(height: 5),
                 Text(
                   description,
                   style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.black87,
-                    height: 1.3,
+                    fontSize: 14, // Tamaño de la fuente.
+                    color: Colors.black87, // Color de la fuente.
+                    height: 1.3, // Altura de la fuente.
                   ),
                 ),
               ],
@@ -101,65 +101,59 @@ class PantallaHobbies extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Mis Hobbies',
+          'Mis Hobbies', // Titulo de la pantalla.
           style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+            fontSize: 22, // Tamaño de la fuente.
+            fontWeight: FontWeight.bold, // Peso de la fuente.
+            color: Colors.white, // Color de la fuente.
           ),
         ),
-        backgroundColor: Colors.blue,
-        elevation: 4,
-        centerTitle: true,
+        backgroundColor: Colors.blue, // Color de la barra de aplicación.
+        elevation: 4, // Elevación de la barra de aplicación.
+        centerTitle: true, // Centrar el titulo.
       ),
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
+        width: double.infinity, // Ancho de la pantalla.
+        height: double.infinity, // Alto de la pantalla.
         decoration: const BoxDecoration(
-          color: Colors.white,
+          color: Colors.white, // Color de la pantalla.
         ),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0), // Espaciado interno.
           child: Column(
             children: [
-              const SizedBox(height: 10),
+              const SizedBox(height: 10), // Espaciado interno.
               Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white.withAlpha((0.9 * 255).round()),
-                  borderRadius: BorderRadius.circular(20),
+                padding: const EdgeInsets.all(20), // Espaciado interno.
+                decoration: BoxDecoration( // Decoración de la tarjeta.
+                  color: Colors.white.withAlpha((0.9 * 255).round()), // Color de la tarjeta.
+                  borderRadius: BorderRadius.circular(20), // Radio de la tarjeta.
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withAlpha((0.1 * 255).round()),
-                      blurRadius: 10,
-                      offset: const Offset(0, 5),
+                      color: Colors.black.withAlpha((0.1 * 255).round()), // Color de la sombra.
+                      blurRadius: 10, // Radio de la sombra.
+                      offset: const Offset(0, 5), // Offset de la sombra.
                     ),
                   ],
                 ),
                 child: const Column(
                   children: [
-                    Icon(
-                      Icons.favorite,
-                      size: 40,
-                      color: Colors.red,
-                    ),
-                    SizedBox(height: 10),
                     Text(
-                      'Mis Pasiones e Intereses',
+                      'Mis Pasiones e Intereses', // Titulo de la pantalla.
                       style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        fontSize: 24, // Tamaño de la fuente.
+                        fontWeight: FontWeight.bold, // Peso de la fuente.
+                        color: Colors.black, // Color de la fuente.
                       ),
                     ),
                     SizedBox(height: 10),
                     Text(
                       'Estas son las actividades que más disfruto en mi tiempo libre',
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black,
+                        fontSize: 14, // Tamaño de la fuente.
+                        color: Colors.black, // Color de la fuente.
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.center, // Alineación del texto.
                     ),
                   ],
                 ),
@@ -168,30 +162,30 @@ class PantallaHobbies extends StatelessWidget {
               const SizedBox(height: 25), // Espacio entre el contenedor y las tarjetas
 
               HobbyCard(
-                title: 'Programación',
-                description: 'Programar en JavaScript, Python, TypeScript',
-                imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=200&fit=crop',
-                icon: Icons.code,
-                color: Colors.blue,
-                iconColor: Colors.blue,
+                title: 'Programación', // Titulo del hobby.
+                description: 'Programar en JavaScript, Python, TypeScript', // Descripcion del hobby.
+                imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=200&fit=crop', // URL de la imagen del hobby.
+                icon: Icons.code, // Icono del hobby.
+                color: Colors.blue, // Color del icono.
+                iconColor: Colors.blue, // Color del icono.
               ),
 
               HobbyCard(
-                title: 'Videojuegos',
-                description: 'League of Legends, R.E.P.O y GTA V',
-                imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=200&h=200&fit=crop',
-                icon: Icons.sports_esports,
-                color: Colors.purple,
-                iconColor: Colors.purple,
+                title: 'Videojuegos', // Titulo del hobby.
+                description: 'League of Legends, R.E.P.O y GTA V', // Descripcion del hobby.
+                imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=200&h=200&fit=crop', // URL de la imagen del hobby.
+                icon: Icons.sports_esports, // Icono del hobby.
+                color: Colors.purple, // Color del icono.
+                iconColor: Colors.purple, // Color del icono.
               ),
 
               HobbyCard(
-                title: 'Deportes',
-                description: 'Fútbol',
-                imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop',
-                icon: Icons.sports_soccer,
-                color: Colors.green,
-                iconColor: Colors.green,
+                title: 'Deportes', // Titulo del hobby.
+                description: 'Fútbol', // Descripcion del hobby.
+                imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop', // URL de la imagen del hobby.
+                icon: Icons.sports_soccer, // Icono del hobby.
+                color: Colors.green, // Color del icono.
+                iconColor: Colors.green, // Color del icono.
               ),
             ],
           ),
