@@ -8,7 +8,7 @@
 
 ## 📌 Prácticas del Curso
 
-### **Práctica 1: Interfaces**
+### **Práctica 1: Interfaces Estaticas en Flutter**
 🔍 **Objetivo**: Crear tres interfaces gráficas en Flutter, sin programación de lógica, para practicar el uso de widgets como Text, Image, Column, Row, Padding y Container. Cada interfaz representa una pantalla diferente de una aplicación personal.
 
 
