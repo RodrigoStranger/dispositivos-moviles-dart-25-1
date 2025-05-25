@@ -22,6 +22,6 @@ En esta tarea no se necesita navegar entre pantallas. Solo debes diseñar cada u
 - **Calculadora elemental**: Desarrollar una calculadora básica que maneje las operaciones aritméticas.
 - **Adivina el número**: Implementar un juego donde el usuario tiene que adivinar un número aleatorio generado por el sistema.
 
-🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)**
+🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-flutter-dart-25-1/tree/main/practica_1_interfaces_estaticas_flutter)**
 
 ---
