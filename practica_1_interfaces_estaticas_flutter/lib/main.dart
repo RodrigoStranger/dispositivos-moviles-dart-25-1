@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Roboto',
       ),
       // Cambiar por PantallaPerfil() o PantallaHobbies() para probar
-      home: PantallaHobbies(),
+      home: PantallaPerfil(),
     );
   }
 }
