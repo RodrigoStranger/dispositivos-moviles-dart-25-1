@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PantallaHobbies extends StatelessWidget {
+class PantallaHobbies extends StatelessWidget { // Clase que representa la pantalla de hobbies
   const PantallaHobbies({super.key});
 
   @override
@@ -20,6 +20,8 @@ class PantallaHobbies extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -134,7 +136,7 @@ class PantallaHobbies extends StatelessWidget {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            'Desarrollo aplicaciones web y móviles. Flutter, React y Python son mis favoritos.',
+                            'Programar en JavaScript, Python, TypeScript',
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.black87,
@@ -202,7 +204,7 @@ class PantallaHobbies extends StatelessWidget {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            'RPGs, estrategia y juegos indie. Me gusta explorar mundos virtuales y historias épicas.',
+                            'League of Legends, R.E.P.O y GTA V',
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.black87,
@@ -216,7 +218,7 @@ class PantallaHobbies extends StatelessWidget {
                 ),
               ),
 
-              // Hobby 3: Música
+              // Hobby 3: Deportes
               Container(
                 margin: const EdgeInsets.only(bottom: 20),
                 padding: const EdgeInsets.all(20),
@@ -243,81 +245,13 @@ class PantallaHobbies extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(15),
                         child: Image.network(
-                          'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop',
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return const Icon(
-                              Icons.music_note,
-                              size: 40,
-                              color: Colors.green,
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 15),
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Música',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            'Toco guitarra y piano. Disfruto del rock, jazz y música electrónica.',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.black87,
-                              height: 1.3,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              // Hobby 4: Deportes
-              Container(
-                margin: const EdgeInsets.only(bottom: 20),
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.95),
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.1),
-                      blurRadius: 8,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.red.shade100,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop',
+                          'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop',
                           fit: BoxFit.cover,
                           errorBuilder: (context, error, stackTrace) {
                             return const Icon(
                               Icons.sports_soccer,
                               size: 40,
-                              color: Colors.red,
+                              color: Colors.green,
                             );
                           },
                         ),
@@ -333,80 +267,12 @@ class PantallaHobbies extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: Colors.red,
+                              color: Colors.green,
                             ),
                           ),
                           SizedBox(height: 5),
                           Text(
-                            'Fútbol y natación son mis favoritos. Me ayudan a mantenerme en forma y relajarme.',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.black87,
-                              height: 1.3,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              // Hobby 5: Lectura
-              Container(
-                margin: const EdgeInsets.only(bottom: 30),
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.95),
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.1),
-                      blurRadius: 8,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.amber.shade100,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop',
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return const Icon(
-                              Icons.menu_book,
-                              size: 40,
-                              color: Colors.amber,
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 15),
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Lectura',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.amber,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            'Ciencia ficción, tecnología y desarrollo personal. Los libros son una ventana al conocimiento.',
+                            'Fútbol',
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.black87,
