@@ -9,7 +9,7 @@ import 'pantalla_hobbies.dart';
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 25/05/2025
-    Ultima modificacion: 25/05/2025 15:56 pm
+    Ultima modificacion: 25/05/2025 16:01 pm
 */
 
 /*

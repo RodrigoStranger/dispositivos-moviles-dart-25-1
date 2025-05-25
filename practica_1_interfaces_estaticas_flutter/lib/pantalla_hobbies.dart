@@ -94,7 +94,7 @@ class HobbyCard extends StatelessWidget {
 
 /// Pantalla que muestra los hobbies e intereses del usuario.
 class PantallaHobbies extends StatelessWidget {
-  const PantallaHobbies({super.key});
+  const PantallaHobbies({super.key}); // Clave del widget.
 
   // Constantes para la tarjeta de bienvenida
   static const _appBarTitle = 'Mis Hobbies'; // Titulo de la barra de aplicacion
@@ -149,30 +149,30 @@ class PantallaHobbies extends StatelessWidget {
             _buildWelcomeCard(), // Tarjeta de bienvenida
             const SizedBox(height: 25),
             HobbyCard(
-              title: 'Programación',
-              description: 'Programar en JavaScript, Python, TypeScript',
-              imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=200&fit=crop',
-              icon: Icons.code,
-              color: Colors.blue,
-              iconColor: Colors.blue,
+              title: 'Programación', // Titulo del hobby
+              description: 'Programar en JavaScript, Python, TypeScript', // Descripcion del hobby
+              imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=200&fit=crop', // URL de la imagen del hobby
+              icon: Icons.code, // Icono del hobby
+              color: Colors.blue, // Color del hobby
+              iconColor: Colors.blue, // Color del icono del hobby
             ),
             const SizedBox(height: 15),
             HobbyCard(
-              title: 'Videojuegos',
-              description: 'League of Legends, R.E.P.O y GTA V',
-              imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=200&h=200&fit=crop',
-              icon: Icons.sports_esports,
-              color: Colors.purple,
-              iconColor: Colors.purple,
+              title: 'Videojuegos', // Titulo del hobby
+              description: 'League of Legends, R.E.P.O y GTA V', // Descripcion del hobby
+              imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=200&h=200&fit=crop', // URL de la imagen del hobby
+              icon: Icons.sports_esports, // Icono del hobby
+              color: Colors.purple, // Color del hobby
+              iconColor: Colors.purple, // Color del icono del hobby
             ),
             const SizedBox(height: 15),
             HobbyCard(
-              title: 'Deportes',
-              description: 'Fútbol',
-              imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop',
-              icon: Icons.sports_soccer,
-              color: Colors.green,
-              iconColor: Colors.green,
+              title: 'Deportes', // Titulo del hobby
+              description: 'Fútbol', // Descripcion del hobby
+              imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop', // URL de la imagen del hobby
+              icon: Icons.sports_soccer, // Icono del hobby
+              color: Colors.green, // Color del hobby
+              iconColor: Colors.green, // Color del icono del hobby
             ),
           ],
         ),
@@ -183,15 +183,15 @@ class PantallaHobbies extends StatelessWidget {
   /// Construye la tarjeta de bienvenida con título y subtítulo.
   Widget _buildWelcomeCard() {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20), // Espaciado interno
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.9),
-        borderRadius: BorderRadius.circular(20),
+        color: Colors.white.withValues(alpha: 0.9), // Color de la tarjeta
+        borderRadius: BorderRadius.circular(20), // Radio de la tarjeta
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
+            color: Colors.black.withValues(alpha: 0.1), // Color de la sombra
+            blurRadius: 10, // Radio de la sombra
+            offset: const Offset(0, 5), // Offset de la sombra
           ),
         ],
       ),
@@ -199,14 +199,14 @@ class PantallaHobbies extends StatelessWidget {
         children: [
           Text(
             _cardTitle,
-            style: _cardTitleStyle,
-            textAlign: TextAlign.center,
+            style: _cardTitleStyle, // Estilo del texto
+            textAlign: TextAlign.center, // Alineacion del contenido
           ),
           const SizedBox(height: 10),
           Text(
-            _cardSubtitle,
-            style: _cardSubtitleStyle,
-            textAlign: TextAlign.center,
+            _cardSubtitle, // Subtitulo de la bienvenida
+            style: _cardSubtitleStyle, // Estilo del texto
+            textAlign: TextAlign.center, // Alineacion del contenido
           ),
         ],
       ),
