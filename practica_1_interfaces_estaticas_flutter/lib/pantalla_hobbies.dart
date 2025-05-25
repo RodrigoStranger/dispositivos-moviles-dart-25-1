@@ -15,7 +15,7 @@ class PantallaHobbies extends StatelessWidget { // Clase que representa la panta
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.blue,
         elevation: 4,
         centerTitle: true,
       ),
@@ -23,15 +23,7 @@ class PantallaHobbies extends StatelessWidget { // Clase que representa la panta
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Colors.orange,
-              Colors.deepOrange,
-              Colors.red,
-            ],
-          ),
+          color: Colors.white,
         ),
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20.0),
@@ -64,7 +56,7 @@ class PantallaHobbies extends StatelessWidget { // Clase que representa la panta
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Colors.orange,
+                        color: Colors.black,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -72,7 +64,7 @@ class PantallaHobbies extends StatelessWidget { // Clase que representa la panta
                       'Estas son las actividades que más disfruto en mi tiempo libre',
                       style: TextStyle(
                         fontSize: 14,
-                        color: Colors.black54,
+                        color: Colors.black,
                       ),
                       textAlign: TextAlign.center,
                     ),
