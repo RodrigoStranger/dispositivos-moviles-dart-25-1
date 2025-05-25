@@ -92,104 +92,123 @@ class HobbyCard extends StatelessWidget {
   }
 }
 
-// Clase que representa la pantalla de hobbies
+/// Pantalla que muestra los hobbies e intereses del usuario.
 class PantallaHobbies extends StatelessWidget {
   const PantallaHobbies({super.key});
+
+  // Constantes para la tarjeta de bienvenida
+  static const _appBarTitle = 'Mis Hobbies'; // Titulo de la barra de aplicacion
+  static const _cardTitle = 'Mis Pasiones e Intereses'; // Titulo de la tarjeta
+  static const _cardSubtitle = 'Estas son las actividades que más disfruto en mi tiempo libre'; // Subtitulo de la tarjeta
+  
+  // Constantes de estilo
+  static const _titleStyle = TextStyle(
+    fontSize: 22, // Tamaño de la fuente
+    fontWeight: FontWeight.bold, // Peso de la fuente
+    color: Colors.white, // Color de la fuente
+  );
+  static const _cardTitleStyle = TextStyle(
+    fontSize: 24, // Tamaño de la fuente
+    fontWeight: FontWeight.bold, // Peso de la fuente
+    color: Colors.black, // Color de la fuente
+  );
+  static const _cardSubtitleStyle = TextStyle(
+    fontSize: 14, // Tamaño de la fuente
+    color: Colors.black87, // Color de la fuente
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Mis Hobbies', // Titulo de la pantalla.
-          style: TextStyle(
-            fontSize: 22, // Tamaño de la fuente.
-            fontWeight: FontWeight.bold, // Peso de la fuente.
-            color: Colors.white, // Color de la fuente.
-          ),
+      appBar: _buildAppBar(), // Barra de aplicacion
+      body: _buildBody(), // Cuerpo de la pantalla
+    );
+  }
+
+  /// Construye la barra de aplicacion.
+  PreferredSizeWidget _buildAppBar() {
+    return AppBar( 
+      title: const Text(_appBarTitle, style: _titleStyle), // Titulo de la barra de aplicacion
+      backgroundColor: Colors.blue, // Color de la barra de aplicacion
+      elevation: 4, // Elevacion de la barra de aplicacion
+      centerTitle: true, // Centrar el titulo
+    );
+  }
+
+  /// Construye el cuerpo principal de la pantalla.
+  Widget _buildBody() {
+    return Container(
+      width: double.infinity, // Ancho de la pantalla
+      height: double.infinity, // Alto de la pantalla
+      color: Colors.white, // Color de la pantalla
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(20.0), // Espaciado interno
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+            _buildWelcomeCard(), // Tarjeta de bienvenida
+            const SizedBox(height: 25),
+            HobbyCard(
+              title: 'Programación',
+              description: 'Programar en JavaScript, Python, TypeScript',
+              imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=200&fit=crop',
+              icon: Icons.code,
+              color: Colors.blue,
+              iconColor: Colors.blue,
+            ),
+            const SizedBox(height: 15),
+            HobbyCard(
+              title: 'Videojuegos',
+              description: 'League of Legends, R.E.P.O y GTA V',
+              imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=200&h=200&fit=crop',
+              icon: Icons.sports_esports,
+              color: Colors.purple,
+              iconColor: Colors.purple,
+            ),
+            const SizedBox(height: 15),
+            HobbyCard(
+              title: 'Deportes',
+              description: 'Fútbol',
+              imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop',
+              icon: Icons.sports_soccer,
+              color: Colors.green,
+              iconColor: Colors.green,
+            ),
+          ],
         ),
-        backgroundColor: Colors.blue, // Color de la barra de aplicación.
-        elevation: 4, // Elevación de la barra de aplicación.
-        centerTitle: true, // Centrar el titulo.
       ),
-      body: Container(
-        width: double.infinity, // Ancho de la pantalla.
-        height: double.infinity, // Alto de la pantalla.
-        decoration: const BoxDecoration(
-          color: Colors.white, // Color de la pantalla.
-        ),
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(20.0), // Espaciado interno.
-          child: Column(
-            children: [
-              const SizedBox(height: 10), // Espaciado interno.
-              Container(
-                padding: const EdgeInsets.all(20), // Espaciado interno.
-                decoration: BoxDecoration( // Decoración de la tarjeta.
-                  color: Colors.white.withAlpha((0.9 * 255).round()), // Color de la tarjeta.
-                  borderRadius: BorderRadius.circular(20), // Radio de la tarjeta.
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withAlpha((0.1 * 255).round()), // Color de la sombra.
-                      blurRadius: 10, // Radio de la sombra.
-                      offset: const Offset(0, 5), // Offset de la sombra.
-                    ),
-                  ],
-                ),
-                child: const Column(
-                  children: [
-                    Text(
-                      'Mis Pasiones e Intereses', // Titulo de la pantalla.
-                      style: TextStyle(
-                        fontSize: 24, // Tamaño de la fuente.
-                        fontWeight: FontWeight.bold, // Peso de la fuente.
-                        color: Colors.black, // Color de la fuente.
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Estas son las actividades que más disfruto en mi tiempo libre',
-                      style: TextStyle(
-                        fontSize: 14, // Tamaño de la fuente.
-                        color: Colors.black, // Color de la fuente.
-                      ),
-                      textAlign: TextAlign.center, // Alineación del texto.
-                    ),
-                  ],
-                ),
-              ),
+    );
+  }
 
-              const SizedBox(height: 25), // Espacio entre el contenedor y las tarjetas
-
-              HobbyCard(
-                title: 'Programación', // Titulo del hobby.
-                description: 'Programar en JavaScript, Python, TypeScript', // Descripcion del hobby.
-                imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=200&fit=crop', // URL de la imagen del hobby.
-                icon: Icons.code, // Icono del hobby.
-                color: Colors.blue, // Color del icono.
-                iconColor: Colors.blue, // Color del icono.
-              ),
-
-              HobbyCard(
-                title: 'Videojuegos', // Titulo del hobby.
-                description: 'League of Legends, R.E.P.O y GTA V', // Descripcion del hobby.
-                imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=200&h=200&fit=crop', // URL de la imagen del hobby.
-                icon: Icons.sports_esports, // Icono del hobby.
-                color: Colors.purple, // Color del icono.
-                iconColor: Colors.purple, // Color del icono.
-              ),
-
-              HobbyCard(
-                title: 'Deportes', // Titulo del hobby.
-                description: 'Fútbol', // Descripcion del hobby.
-                imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=200&h=200&fit=crop', // URL de la imagen del hobby.
-                icon: Icons.sports_soccer, // Icono del hobby.
-                color: Colors.green, // Color del icono.
-                iconColor: Colors.green, // Color del icono.
-              ),
-            ],
+  /// Construye la tarjeta de bienvenida con título y subtítulo.
+  Widget _buildWelcomeCard() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.9),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
           ),
-        ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Text(
+            _cardTitle,
+            style: _cardTitleStyle,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            _cardSubtitle,
+            style: _cardSubtitleStyle,
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }

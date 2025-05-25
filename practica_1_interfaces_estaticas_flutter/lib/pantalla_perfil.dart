@@ -13,11 +13,15 @@ class PantallaPerfil extends StatelessWidget {
     );
   }
 
+  // Constantes para los textos estáticos
+  static const String _appBarTitle = 'Mi Perfil';
+  static const String _contactSectionTitle = 'Información de contacto';
+  
   /// Construye la barra de aplicación de la pantalla de perfil.
   PreferredSizeWidget _buildAppBar() {
     return AppBar(
       title: const Text(
-        'Mi Perfil', // Titulo de la pantalla.
+        _appBarTitle, // Titulo de la pantalla.
         style: TextStyle(
           fontSize: 22, // Tamaño de la fuente.
           fontWeight: FontWeight.bold, // Peso de la fuente.
@@ -231,10 +235,10 @@ class PantallaPerfil extends StatelessWidget {
 
   /// Construye el encabezado de la sección de contacto.
   Widget _buildContactHeader() {
-    return const Center(
+    return Center(
       child: Text(
-        'Información de Contacto', // Texto del encabezado.
-        style: TextStyle(
+        _contactSectionTitle, // Texto del encabezado.
+        style: const TextStyle(
           fontSize: 20, // Tamaño de la fuente.
           fontWeight: FontWeight.bold, // Peso de la fuente.
           color: Colors.black, // Color de la fuente.
