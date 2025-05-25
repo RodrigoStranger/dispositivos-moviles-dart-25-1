@@ -11,7 +11,7 @@ class HobbyCard extends StatelessWidget {
 
   // Constructor de la clase HobbyCard
   const HobbyCard({
-    super.key,
+    super.key, // Clave del widget
     required this.title, // Titulo del hobby
     required this.description, // Descripcion del hobby
     required this.imageUrl, // URL de la imagen del hobby
