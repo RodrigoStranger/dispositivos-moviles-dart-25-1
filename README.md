@@ -17,7 +17,7 @@ En esta tarea no se necesita navegar entre pantallas. Solo debes diseñar cada u
 
 
 💡 **Ejercicios de esta práctica**:
-- **Creacion de 3 interfaces (pantalla_inicio.dart, pantalla_perfil.dart, pantalla_hobbies.dart)
+- **Creacion de 3 interfaces (pantalla_inicio.dart, pantalla_perfil.dart, pantalla_hobbies.dart)**
 
 🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-flutter-dart-25-1/tree/main/practica_1_interfaces_estaticas_flutter)**
 
